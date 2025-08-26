@@ -116,7 +116,7 @@ const portfolioLists = [
         lists: ["React Js", "Laravel"]
     },
     {
-        image: "/portfolio/creditsesame.svg",
+        image: "/portfolio/i-love-kickboxing-img.png",
         title: "ILKB",
         lists: ["Laravel", "Vuejs", "My sql"]
     },
@@ -131,17 +131,17 @@ const portfolioLists = [
         lists: ["Nodejs", "Reactjs", "Google Flutter"]
     },
     {
-        image: "/portfolio/creditsesame.svg",
+        image: "/portfolio/bpo-solutions-group-img.png",
         title: "BPO Solutions group",
         lists: ["Reactjs"]
     },
     {
-        image: "/portfolio/creditsesame.svg",
+        image: "/portfolio/scylex-labs-img.png",
         title: "Scylex",
         lists: ["Python", "Vuejs"]
     },
     {
-        image: "/portfolio/creditsesame.svg",
+        image: "/portfolio/stability-healthcare-img.png",
         title: "Stability Health Care",
         lists: ["Laravel", "Vuejs", "Open AI"]
     },
@@ -162,6 +162,7 @@ const Home = () => {
                                 initial={{opacity: 0, translateY: 20}}
                                 whileInView={{opacity: 1, translateY: 0}}
                                 transition={{ duration: 1 }}
+                                className="text-52 leading-[3.75rem] md:text-68 md:leading-[5rem] font-heading font-bold"
                             >Transforming Ideas into Digital Reality</motion.h1>
                             <motion.p 
                                 initial={{opacity: 0, translateY: 30}}
@@ -209,14 +210,14 @@ const Home = () => {
                                     initial={{opacity: 0, translateY: 30}}
                                     whileInView={{opacity: 1, translateY: 0}}
                                     transition={{ duration: 1 }} 
-                                    className="text-xl font-normal w-full md:w-10/12">
+                                    className="text-xl font-normal w-full">
                                     We deliver a diverse range of solutions designed to ensure quality, reliability, and timely results.
                                 </motion.p>
                                 <motion.p 
                                     initial={{opacity: 0, translateY: 40}}
                                     whileInView={{opacity: 1, translateY: 0}}
                                     transition={{ duration: 1 }} 
-                                    className="text-xl font-normal w-full md:w-10/12">
+                                    className="text-xl font-normal w-full">
                                     At Mahasos, we empower businesses worldwide with services that drive growth and efficiency.
                                 </motion.p>
                             </div>
@@ -227,13 +228,13 @@ const Home = () => {
                                 className="flex items-center mt-3">
                                 <Button 
                                     type="button" 
-                                    text="schedule a demo" 
+                                    text="Get a Free Quote" 
                                     icon={<HandWaveIcon />}
                                 />
                             </motion.div>
                         </div>
                     </div>
-                    <div className="flex flex-col w-full md:w-9/12 bg-white">
+                    <div className="flex flex-col w-full md:w-9/12 bg-white p-4 md:p-6">
                         <ServiceCard
                              items={serviceCardLists}
                         />
@@ -244,7 +245,7 @@ const Home = () => {
                 <div className="flex flex-col md:flex-row w-full gap-8 md:gap-0">
                     <div className="flex flex-col gap-4 w-full md:w-5/12">
                         <motion.h2>Our Valued Partners</motion.h2>
-                        <motion.p className="text-xl font-normal w-full md:w-10/12">Proudly collaborating with leading companies to deliver exceptional digital solutions.</motion.p>
+                        <motion.p className="text-xl font-normal w-full">Proudly collaborating with leading companies to deliver exceptional digital solutions.</motion.p>
                     </div>
                     <div className="flex flex-col md:flex-row items-start md:items-center gap-9 w-full md:w-7/12 pl-0 md:pl-8">
                         <div className="flex items-center">
@@ -305,7 +306,7 @@ const Home = () => {
                             </motion.div>
                         </div>
                     </div>
-                    <div className="flex flex-col w-full md:w-8/12">
+                    <div className="flex flex-col w-full md:w-8/12 bg-white p-4 md:p-6">
                         <PortfolioCard
                              items={portfolioLists}
                         />
@@ -322,6 +323,7 @@ const Home = () => {
                                 initial={{opacity: 0, translateY: 20}}
                                 whileInView={{opacity: 1, translateY: 0}}
                                 transition={{ duration: 1 }}
+                                className="text-52 leading-[3.75rem] md:text-68 md:leading-[5rem] font-heading font-bold"
                             >Ready to Transform Your Idea?</motion.h1>
                             <motion.p
                                 initial={{opacity: 0, translateY: 30}}

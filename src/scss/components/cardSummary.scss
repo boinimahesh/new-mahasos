@@ -1,0 +1,34 @@
+.cardsummary{
+    display: flex;
+    width: 33.33%;
+}
+.cs_main{
+    width: 100%;
+    background-color: #192433;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    color: #fff;
+    border-radius: 0;
+    text-align: center;
+}
+.cardsummary:nth-child(2n) .cs_main{
+    background-color: #fbbc05;
+    color: #192433;
+}
+.cardsummary h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.cardsummary .cs_main p{
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+@media screen and (max-width: 767px) {
+    .cardsummary{
+        width: 100%;
+    }
+}

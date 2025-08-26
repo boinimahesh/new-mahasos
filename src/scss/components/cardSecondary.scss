@@ -1,0 +1,44 @@
+.cardsecondary{
+    display: flex;
+    flex-direction: column;
+    width: 33.333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.cs_main{
+    background-color: #192433;
+    padding: 30px 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+    flex-direction: column;
+    text-align: center;
+}
+.cs_icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 128px;
+    margin-bottom: 20px;
+}
+.cs_icon img{
+    max-width: 100%;
+}
+.cardsecondary h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+.cardsecondary .cs_main p{
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+@media screen and (max-width: 767px) {
+    .cardsecondary{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}

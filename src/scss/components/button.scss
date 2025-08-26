@@ -1,5 +1,5 @@
 .btn{
-    @apply flex items-center gap-4 border rounded-md h-14 py-4 px-7 font-body font-bold text-xl leading-full uppercase;
+    @apply flex items-center gap-4 border rounded-md h-14 py-4 px-7 font-body font-bold text-xl leading-full uppercase whitespace-nowrap;
     &.btn-small{
         @apply h-10 py-1 px-4 text-base gap-2;
         .btn-icon{

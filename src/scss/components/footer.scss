@@ -23,8 +23,8 @@
                 @apply flex;
                 .policy-list-item-link{
                     @apply flex items-center gap-2;
-                    .policy-list-item-link .item-icon{
-                        @apply flex w-6 h-6;
+                    .item-icon{
+                        @apply flex items-center justify-center w-6 h-6;
                     }
                 }
             }

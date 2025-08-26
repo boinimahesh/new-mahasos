@@ -21,29 +21,64 @@ const navLists = [
         link: "/about",
     },
     {
-        text: "Showcase",
-        link: "/showcase",
+        text: "Our Team",
+        link: "/team",
     },
     {
-        text: "Offerings",
-        link: "/offerings",
+        text: "Portfolio",
+        link: "/portfolio"
+    },
+    {
+        text: "Services",
+        link: "/services"
+    },
+    {
+        text: "AI/ML",
+        link: "/artificialIntelligence"
     },
     {
         text: "BPO",
-        link: "/bpo",
+        link: "/bpo"
     },
     {
-        text: "Products",
-        link: "/products",
+        text: "b2bleadgeneration",
+        link: "/b2bleadgeneration"
     },
     {
-        text: "Opportunities",
-        link: "/opportunities",
+        text: "Jobs",
+        link: "/jobs"
     },
     {
         text: "Contact",
-        link: "/contact",
-    },
+        link: "/contactus"
+    }
+    
+
+
+    // {
+    //     text: "Showcase",
+    //     link: "/showcase",
+    // },
+    // {
+    //     text: "Offerings",
+    //     link: "/offerings",
+    // },
+    // {
+    //     text: "BPO",
+    //     link: "/bpo",
+    // },
+    // {
+    //     text: "Products",
+    //     link: "/products",
+    // },
+    // {
+    //     text: "Opportunities",
+    //     link: "/opportunities",
+    // },
+    // {
+    //     text: "Contact",
+    //     link: "/contact",
+    // },
 ]
 const menuVariants = {
     hidden: {

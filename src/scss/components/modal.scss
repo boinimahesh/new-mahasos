@@ -1,0 +1,81 @@
+.modal-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.modal-main-wrap{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 48px 48px;
+}
+
+.modal-heading{
+    display: flex;
+    position: relative;
+}
+.modal-heading .modal-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.thank-you-contact-wrp{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+.thank-you-contact-wrp .thank-you-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid #2a78ff;
+    color: #fff;
+    background-color: #2a78ff;
+    padding: 16px;
+}
+.thank-you-contact-wrp .thank-you-title{
+    font-weight: 700;
+    margin-bottom: 0;
+    color: #2a78ff;
+}
+.thank-you-desc{
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 22px;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.thank-you-desc p{
+    margin-bottom: 0;
+}

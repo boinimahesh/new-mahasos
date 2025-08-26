@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import LinkedInIcon from "../svg/LinkedInIcon"
 import LocationIcon from "../svg/LocationIcon"
 import MailIcon from "../svg/MailIcon"
@@ -8,24 +8,27 @@ import CalendlySchedule from "../CalendlySchedule";
 // import CalendlyScheduleNew from "../CalendlyScheduleNew";
 
 const Footer = () => {
+    const location = useLocation();
     const currentYear = new Date().getFullYear();
     return (
         <>
-            {/* <CalendlyScheduleNew /> */}
-            <CalendlySchedule />
-            {/* <div class="calendly-inline-widget" data-url="https://calendly.com/mahasos"></div> */}
-            <div className="map_wrapper">
-                <MapEmbed
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2690.7778778906077!2d78.39280124862549!3d17.49153162889439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x81590ec7359ee666!2sManjeera+Majestic+Commercial!5e0!3m2!1sen!2sin!4v1562307619248!5m2!1sen!2sin" 
-                    width="100%" 
-                    height="300px" 
-                />
-                <MapEmbed 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3364.6631770407785!2d-116.99204968548942!3d32.5084305049401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d948014affffff%3A0x22d96c137cafdf74!2sBPO%20Solutions%20Group!5e0!3m2!1sen!2sin!4v1623335449440!5m2!1sen!2sin" 
-                    width="100%" 
-                    height="300px" 
-                />
-            </div>
+            {location.pathname === "/" ? null : (
+                <>
+                    <CalendlySchedule />
+                    <div className="map_wrapper">
+                        <MapEmbed
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2690.7778778906077!2d78.39280124862549!3d17.49153162889439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x81590ec7359ee666!2sManjeera+Majestic+Commercial!5e0!3m2!1sen!2sin!4v1562307619248!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="300px" 
+                        />
+                        <MapEmbed 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3364.6631770407785!2d-116.99204968548942!3d32.5084305049401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d948014affffff%3A0x22d96c137cafdf74!2sBPO%20Solutions%20Group!5e0!3m2!1sen!2sin!4v1623335449440!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="300px" 
+                        />
+                    </div>
+                </>
+            )}
             <footer className="footer-wrapper">
                 <div className="container">
                     <div className="footer-details">
