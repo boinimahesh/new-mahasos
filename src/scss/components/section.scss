@@ -1,0 +1,18 @@
+.section-wrapper{
+    @apply flex flex-col w-full py-14 px-6;
+    &.section-home-banner{
+        @apply items-center justify-end bg-primary text-white pt-20 pb-0 md:h-screen md:-mt-25;
+    }
+    &.section-ready-to-transform{
+        @apply bg-primary text-white;
+    }
+    &.section-our-partners{
+        @apply bg-light-gray py-14 md:py-20;
+    }
+    &.section-our-portfolio{
+        @apply bg-light-gray py-14 md:py-20;
+    }
+    &.section-no-found{
+        @apply h-screen items-center justify-center;
+    }
+}

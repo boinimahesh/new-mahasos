@@ -1,0 +1,74 @@
+.header-wrapper{
+    @apply flex items-center w-full h-15 md:h-25 py-4 px-6 fixed top-0 transition-all ease-in-out;
+    z-index: 99;
+    &.header-sticky{
+        @apply py-4 h-15 bg-white shadow-card;
+    }
+    &.header-home{
+        .nav-wrapper{
+            .nav-items{
+                .nav-item{
+                    .nav-item-link{
+                        @apply text-white;
+                        &.active{
+                            @apply border-white text-white;
+                        }
+                    }
+                }
+            }
+        }
+        &.header-sticky{
+            .nav-wrapper{
+                .nav-items{
+                    .nav-item{
+                        .nav-item-link{
+                            @apply text-dark;
+                            &.active{
+                                @apply border-primary text-primary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container,
+    .container-fluid{
+        @apply transition-all ease-in-out;
+    }
+    .header-main-wrp{
+        @apply flex items-center justify-between w-full;
+        .header-left{
+            @apply flex items-center w-60 md:w-64 md:min-w-64;
+        }
+        .header-right{
+            @apply flex items-center justify-end md:w-[calc(100%_-_15rem)] gap-4;
+            .btn-top-lettalk{
+                @apply h-12.5 gap-2.5 rounded-30 uppercase;
+                .btn-text{
+                    @apply whitespace-nowrap;
+                }
+            }
+        }
+    }
+}
+
+.navbar-slide-wrp{
+    @apply flex flex-col items-center fixed top-0 bottom-0 w-full bg-light-gray px-6 py-6;
+    z-index: 999;
+    .navbar-slide-main{
+        @apply flex flex-col items-center justify-between w-full gap-12;
+    }
+    .nav-wrapper{
+        @apply flex flex-col w-full;
+        .nav-items{
+            @apply flex flex-col w-full;
+            .nav-item{
+                @apply w-full;
+                .nav-item-link{
+                    @apply flex items-center justify-center w-full py-3 text-base;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,85 @@
+.calendly-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 40px 24px;
+}
+.calendly-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #2a78ff;
+    padding: 48px 32px;
+}
+.calendly-wrapper .calendly-left{
+    display: flex;
+    width: 30%;
+}
+.calendly-wrapper .calendly-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+.calendly-wrapper .calendly-image .calendly-image-title{
+    color: #2a78ff;
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0;
+}
+.calendly-wrapper .calendly-right{
+    display: flex;
+    width: 70%;
+    padding-left: 32px;
+}
+.calendly-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 16px;
+    max-width: 95%;
+}
+.calendly-content h2{
+    font-size: 30px;
+    font-weight: 700;
+}
+.calendly-content p{
+    font-size: 18px;
+    color: #2a78ff;
+    font-weight: 700;
+}
+.calendly-meeting-call-icon{
+    display: flex;
+    max-width: 48px;
+}
+@media screen and (max-width: 767px) {
+    .calendly-section{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .calendly-wrapper{
+        flex-direction: column;
+        gap: 48px;
+        padding: 32px 24px;
+    }
+    .calendly-wrapper .calendly-left{
+        width: 100%;
+    }
+    .calendly-wrapper .calendly-right{
+        width: 100%;
+        padding-left: 0;
+    }
+    .calendly-content h2{
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .calendly-content h2 br{
+        display: none;
+    }
+}

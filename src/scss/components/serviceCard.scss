@@ -1,0 +1,37 @@
+.service-wrapper{
+    @apply flex flex-col items-center w-full gap-0;
+    .service-card{
+        @apply flex flex-col md:flex-row items-center justify-between w-full rounded-xl py-8 px-6 hover:shadow-card cursor-pointer transition-all ease-out;
+        &:hover{
+            .service-item-icon{
+                @apply text-primary;
+            }
+            .service-item-text{
+                .service-item-text-title{
+                    @apply text-primary;
+                }
+                .service-item-text-subtitle{
+                    @apply text-dark-gray;
+                }
+            }
+        }
+        .service-item-content{
+            @apply flex items-start md:items-center flex-col md:flex-row gap-6;
+        }
+        .service-item-icon{
+            @apply flex items-center justify-center w-17.5 h-17.5 min-w-17.5 text-black;
+        }
+        .service-item-text{
+            @apply flex flex-col;
+            .service-item-text-title{
+                @apply font-bold text-3xl leading-9 text-black;
+            }
+            .service-item-text-subtitle{
+                @apply font-semibold text-lg leading-6 md:leading-9 text-dark-gray;
+            }
+        }
+        .service-item-action{
+            @apply flex items-center;
+        }
+    }
+}

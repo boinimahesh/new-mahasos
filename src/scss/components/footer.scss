@@ -1,0 +1,33 @@
+.footer-wrapper{
+    @apply flex flex-col w-full py-12 bg-dark-gray text-white;
+    .footer-details{
+        @apply flex flex-col items-center justify-center md:flex-row w-full gap-12 px-6;
+    }
+    .copyrights{
+        @apply flex flex-col md:flex-row items-center justify-between w-full border-t border-t-dark pt-8 mt-8 px-6;
+    }
+    .social-media-lists{
+        @apply flex items-center gap-4;
+        .sml-item{
+            @apply flex items-center;
+            .sml-item-link{
+                @apply flex items-center justify-center w-12 h-12 rounded-lg bg-dark hover:bg-primary;
+            }
+        }
+    }
+    .policy-list-wrp{
+        @apply flex items-center justify-center;
+        .policy-lists{
+            @apply flex items-center p-0 m-0;
+            .policy-list-item{
+                @apply flex;
+                .policy-list-item-link{
+                    @apply flex items-center gap-2;
+                    .policy-list-item-link .item-icon{
+                        @apply flex w-6 h-6;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.map_wrapper{
+    width: 100%;
+    display: flex;
+}
+.map_box{
+    width: 50%;
+    display: flex;
+}
+.map_box iframe {
+    filter: grayscale(99%);
+}
+.map_box iframe:hover {
+    filter: grayscale(0%);
+}

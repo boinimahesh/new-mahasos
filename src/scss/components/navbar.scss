@@ -1,0 +1,15 @@
+.nav-wrapper{
+    @apply flex items-center;
+    .nav-items{
+        @apply flex items-center gap-1;
+        .nav-item{
+            @apply flex items-center;
+            .nav-item-link{
+                @apply flex items-center justify-center font-body font-semibold text-lg uppercase text-dark-gray px-3 border border-transparent rounded-30 h-10;
+                &.active{
+                    @apply text-primary border-primary;
+                }
+            }
+        }
+    }
+}

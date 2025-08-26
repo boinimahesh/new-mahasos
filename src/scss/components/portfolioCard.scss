@@ -1,0 +1,21 @@
+.portfolio-wrapper{
+    @apply flex flex-col w-full gap-25;
+    .portfolio-card{
+        @apply flex flex-col w-full gap-16;
+        .portfolio-item-image{
+            @apply flex flex-col w-full shadow-image;
+        }
+        .portfolio-item-details{
+            @apply flex flex-col w-full gap-3;
+            .portfolio-item-detail-title{
+                @apply flex items-center font-body font-bold text-3xl text-black;
+            }
+            .portfolio-item-detail-lists{
+                @apply flex items-center gap-2.5;
+                .portfolio-item-detail-list-item{
+                    @apply flex items-center px-5 py-1 bg-dark-gray text-white rounded font-normal text-base;
+                }
+            }
+        }
+    }
+}
