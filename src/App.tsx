@@ -16,6 +16,8 @@ import InventoryManagement from './pages/ourProduct/InventoryManagement'
 import Integrate from './pages/ourProduct/Integrate'
 import OrderManagement from './pages/ourProduct/OrderManagement'
 import PrivacyPolicy from './pages/PrivacyPolicy'
+// import HomeOld from './pages/home/HomeOld'
+import LetTalks from './pages/LetTalks'
 
 function App() {
   return (
@@ -36,8 +38,8 @@ function App() {
         <Route path="/ourProduct/orderManagement" element={<OrderManagement />} />
         <Route path="/contactus" element={<Contactus />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-
-        
+        <Route path="/lettalks" element={<LetTalks />} />
+        {/* <Route path="/homeOld" element={<HomeOld />} /> */}
         {/* <Route path="/hire-our-team" element={<HireOurTeam />} />
         <Route path="/sixjuly" element={<Sixjuly />} /> */}
 

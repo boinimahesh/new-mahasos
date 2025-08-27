@@ -13,7 +13,7 @@ const Contactus = () => {
                     </div>          
                     </div>
                     <div className="row mb5">
-                    <div className="w_8 mxAuto">
+                    <div className="w_8 mx-auto">
                         <ContactForm />
                     </div>
                     </div>

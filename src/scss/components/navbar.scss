@@ -1,9 +1,21 @@
 .nav-wrapper{
     @apply flex items-center;
     .nav-items{
-        @apply flex items-center gap-1;
+        @apply flex items-center gap-0.5;
         .nav-item{
             @apply flex items-center;
+            &.nav-item-dropdown{
+                @apply relative flex flex-col items-center justify-center;
+                .nav-item-dropdown-menu{
+                    @apply relative md:absolute md:top-full bg-white border border-dark-gray/10 shadow-2xl rounded-30 min-w-64 py-0 px-2;
+                    .nav-item-link{
+                        @apply capitalize border-0 rounded-none;
+                        &.active{
+                            @apply text-primary;
+                        }
+                    }
+                }
+            }
             .nav-item-link{
                 @apply flex items-center justify-center font-body font-semibold text-lg uppercase text-dark-gray px-3 border border-transparent rounded-30 h-10;
                 &.active{

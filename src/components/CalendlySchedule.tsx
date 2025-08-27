@@ -35,12 +35,12 @@ const CalendlySchedule = () => {
                                 <img src={MeetingCallIcon} alt="Think Tank Member" className="img-fluid" />
                             </div>
                             <NavLink
-                                to="#"
+                                to="/lettalks"
                                 className="btn" 
-                                onClick={(e) => {
-                                window.location.href = "https://calendly.com/mahasos/30min?hide_gdpr_banner=1&month=2024-08";
-                                e.preventDefault();
-                                }}
+                                // onClick={(e) => {
+                                // window.location.href = "https://calendly.com/mahasos/30min?hide_gdpr_banner=1&month=2024-08";
+                                // e.preventDefault();
+                                // }}
                             >
                                 Let's Have a Call
                             </NavLink>

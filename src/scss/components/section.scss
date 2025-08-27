@@ -1,7 +1,13 @@
 .section-wrapper{
     @apply flex flex-col w-full py-14 px-6;
     &.section-home-banner{
-        @apply items-center justify-end bg-primary text-white pt-20 pb-0 md:h-screen md:-mt-25;
+        @apply items-center justify-center bg-primary text-white pt-20 pb-0 md:h-screen md:-mt-25;
+        .container{
+            @apply h-full;
+            .section-main{
+                @apply h-full;
+            }
+        }
     }
     &.section-ready-to-transform{
         @apply bg-primary text-white;
@@ -14,5 +20,8 @@
     }
     &.section-no-found{
         @apply h-screen items-center justify-center;
+    }
+    .section-main{
+        @apply flex flex-col w-full;
     }
 }

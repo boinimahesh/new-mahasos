@@ -14,7 +14,7 @@ const Footer = () => {
         <>
             {location.pathname === "/" ? null : (
                 <>
-                    <CalendlySchedule />
+                    {location.pathname === "/lettalks" ? null : <CalendlySchedule />}
                     <div className="map_wrapper">
                         <MapEmbed
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2690.7778778906077!2d78.39280124862549!3d17.49153162889439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x81590ec7359ee666!2sManjeera+Majestic+Commercial!5e0!3m2!1sen!2sin!4v1562307619248!5m2!1sen!2sin" 

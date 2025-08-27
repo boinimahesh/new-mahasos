@@ -1,0 +1,68 @@
+.cardbox{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-width: 33.3333%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.cardbox .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    border: 0px;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    background: transparent;
+    -webkit-transition: background-color 0.8s ease-out;
+    -moz-transition: background-color 0.8s ease-out;
+    -o-transition: background-color 0.8s ease-out;
+    transition: background-color 0.8s ease-out;
+}
+.cardbox .card:hover {
+    background: #2a78ff;
+    color: #ffffff;
+}
+.cardbox .card svg {
+    min-height: 340px;
+}
+.cardbox .card .cardTitle {
+    color: #2a78ff;
+    font-weight: 500;
+}
+.cardbox .card:hover .cardTitle {
+    color: #ffffff;
+}
+.cardbox .card .card-img-top {
+    padding: 15px;
+}
+.cardbox .card .cardBody {
+    min-height: 200px;
+    padding: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .cardbox{
+        height: auto;
+        max-width: 100%;
+    }
+    .cardbox .card{
+        padding: 0;
+        margin-bottom: 50px;
+    }
+    .cardbox .card .cardTitle{
+        margin-top: 0;
+    }
+    .cardbox .card .cardText{
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    .cardbox .card .cardBody{
+        min-height: auto;
+    }
+}

@@ -26,6 +26,7 @@ const JoinOurTeamSection = ({className} : JoinOurTeamSectionProps) => {
                     <h1 className="textCenter mb4">Want to jump on board and make some magic?</h1>
                     <div className="flex items-center justify-center">
                         <Button
+                            white
                             type="button"
                             text="Join Our Team"
                             onClick={() => navigate('/team')}

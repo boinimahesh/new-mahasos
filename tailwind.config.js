@@ -14,6 +14,7 @@ export default {
         'black': '#000000',
         'dark': '#0F172A',
         'dark-gray': '#1E293B',
+        'dark-secondary': '#192433',
       },
       spacing: {
         '7.5': '1.875rem',
@@ -56,9 +57,10 @@ export default {
       },
       boxShadow: {
         'image': '0px 10px 30px 0px #0000001A',
-        'card': '0px 2px 10px 0px #0000001A'
+        'card': '0px 2px 10px 0px #0000001A',
       },
       borderRadius: {
+        '10': '0.625rem;',
         '30': '1.875rem',
       }
     },

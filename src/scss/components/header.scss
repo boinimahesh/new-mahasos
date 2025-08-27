@@ -42,9 +42,9 @@
             @apply flex items-center w-60 md:w-64 md:min-w-64;
         }
         .header-right{
-            @apply flex items-center justify-end md:w-[calc(100%_-_15rem)] gap-4;
+            @apply flex items-center justify-end md:w-[calc(100%_-_15rem)] gap-2;
             .btn-top-lettalk{
-                @apply h-12.5 gap-2.5 rounded-30 uppercase;
+                @apply h-12.5 gap-2.5 rounded-30 uppercase px-4 text-lg;
                 .btn-text{
                     @apply whitespace-nowrap;
                 }

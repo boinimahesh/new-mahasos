@@ -5,8 +5,8 @@ import USAImg from '../assets/images/img_usa.jpg'
 import TijuanaImg from '../assets/images/tijuana.jpg'
 
 type PlaceSectionProps = {
-    bgwhite: boolean;
-    notitle: boolean
+    bgwhite?: boolean;
+    notitle?: boolean
 }
 const PlaceSection = ({bgwhite, notitle} : PlaceSectionProps) => {
     const {isMobile} = useResponsive();

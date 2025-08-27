@@ -6,7 +6,7 @@ import HandWaveIcon from "../../components/svg/HandWaveIcon";
 import BirdIcon from "../../components/svg/BirdIcon";
 import IdeasDigitalIcon from "../../components/svg/IdeasDigitalIcon";
 import { motion } from "framer-motion";
-import JulyLogo from "/public/6july-logo.svg";
+import JulyLogo from "/6july-logo.svg?url";
 import PortfolioCard from "../../components/PortfolioCard";
 import ServiceCard from "../../components/ServiceCard";
 import WebDevIcon from "../../components/svg/WebDevIcon";
@@ -25,6 +25,7 @@ import SalesforceDevIcon from "../../components/svg/SalesforceDevIcon";
 import SupportMaintenanceIcon from "../../components/svg/SupportMaintenanceIcon";
 import B2BLeadGenerationIcon from "../../components/svg/B2BLeadGenerationIcon";
 import UnityGameDevIcon from "../../components/svg/UnityGameDevIcon";
+import { useNavigate } from "react-router-dom";
 
 const serviceCardLists = [
     {
@@ -116,7 +117,7 @@ const portfolioLists = [
         lists: ["React Js", "Laravel"]
     },
     {
-        image: "/portfolio/i-love-kickboxing-img.png",
+        image: "/portfolio/i-love-kickboxing-img.svg",
         title: "ILKB",
         lists: ["Laravel", "Vuejs", "My sql"]
     },
@@ -136,12 +137,12 @@ const portfolioLists = [
         lists: ["Reactjs"]
     },
     {
-        image: "/portfolio/scylex-labs-img.png",
+        image: "/portfolio/scylex-labs-img.svg",
         title: "Scylex",
         lists: ["Python", "Vuejs"]
     },
     {
-        image: "/portfolio/stability-healthcare-img.png",
+        image: "/portfolio/stability-healthcare-img.svg",
         title: "Stability Health Care",
         lists: ["Laravel", "Vuejs", "Open AI"]
     },
@@ -152,10 +153,11 @@ const portfolioLists = [
     },
 ]
 const Home = () => {
+    const navigate = useNavigate();
     return (
         <Layout>
             <Section className="section-home-banner">
-                <div className="flex flex-col items-center md:flex-row w-full gap-8">
+                <div className="flex flex-col items-center h-full md:flex-row w-full gap-8">
                     <div className="flex flex-col w-full md:w-8/12">
                         <div className="flex flex-col w-full gap-7">
                             <motion.h1 
@@ -181,11 +183,12 @@ const Home = () => {
                                     type="button" 
                                     text="Schedule a Call" 
                                     icon={<HandWaveIcon />}
+                                    onClick={()=>navigate('/lettalks')}
                                 />
                             </motion.div>
                         </div>
                     </div>
-                    <div className="flex flex-col items-center justify-center w-full md:w-4/12">
+                    <div className="flex flex-col items-center justify-end w-full md:w-4/12 h-full">
                         <motion.div
                             initial={{opacity: 0, translateY: 50}}
                             whileInView={{opacity: 1, translateY: 0}}
@@ -230,6 +233,7 @@ const Home = () => {
                                     type="button" 
                                     text="Get a Free Quote" 
                                     icon={<HandWaveIcon />}
+                                    onClick={()=>navigate('/lettalks')}
                                 />
                             </motion.div>
                         </div>
@@ -264,7 +268,7 @@ const Home = () => {
                             speed={50}
                             className=" font-normal font-body text-2xl md:text-4xl leading-full"
                             repeat={Infinity}
-                            />
+                        />
                     </div>
                 </div>
             </Section>
@@ -302,11 +306,12 @@ const Home = () => {
                                     type="button" 
                                     text="schedule a demo" 
                                     icon={<HandWaveIcon />}
+                                    onClick={()=>navigate('/lettalks')}
                                 />
                             </motion.div>
                         </div>
                     </div>
-                    <div className="flex flex-col w-full md:w-8/12 bg-white p-4 md:p-6">
+                    <div className="flex flex-col w-full md:w-9/12 bg-white p-4 md:p-6">
                         <PortfolioCard
                              items={portfolioLists}
                         />
@@ -339,6 +344,7 @@ const Home = () => {
                                     type="button" 
                                     text="Start your project" 
                                     icon={<HandWaveIcon />}
+                                    onClick={()=>navigate('/lettalks')}
                                 />
                             </motion.div>
                         </div>

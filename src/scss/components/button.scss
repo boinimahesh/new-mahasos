@@ -15,11 +15,15 @@
     &.btn-link{
         @apply p-0 h-auto border-0;
     }
+    &.btn-white{
+        @apply bg-white text-primary;
+    }
     &.btn-danger{
     }
     &.btn-dark{
     }
     &.btn-secondary{
+        @apply bg-dark-secondary border-dark-secondary text-white hover:bg-white hover:text-dark-secondary hover:border-dark-secondary;
     }
     &.btn-outline{
         @apply bg-none;

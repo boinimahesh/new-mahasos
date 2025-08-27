@@ -14,7 +14,7 @@ const Section = ({children, className} : SectionProps) => {
             className={`section-wrapper ${className ? className : ''}`}
         >
             <div className="container">
-                <div className=" flex flex-col w-full">{children}</div>
+                <div className="section-main">{children}</div>
             </div>
         </motion.section>
     )

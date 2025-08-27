@@ -9,17 +9,18 @@ type ButtonProps = {
     icon?: string | ReactNode;
     outline?: boolean;
     secondary?: boolean;
+    white?: boolean;
     dark?: boolean;
     danger?: boolean;
     link?: boolean;
     small?: boolean;
 }
 
-const Button = ({type, text, className, disabled, onClick, link, dark, secondary, danger, icon, outline, small} : ButtonProps) => {
+const Button = ({type, text, className, disabled, onClick, link, dark, white, secondary, danger, icon, outline, small} : ButtonProps) => {
     return (
         <button 
             type={type}
-            className={`btn ${link ? 'btn-link' : danger ? 'btn-danger' : dark ? 'btn-dark' : secondary ? 'btn-secondary' : 'btn-primary'} ${outline ? 'btn-outline' : ''} ${small ? 'btn-small' : ''} ${className ? className : ''}`}
+            className={`btn ${link ? 'btn-link' : danger ? 'btn-danger' : white ? 'btn-white' : dark ? 'btn-dark' : secondary ? 'btn-secondary' : 'btn-primary'} ${outline ? 'btn-outline' : ''} ${small ? 'btn-small' : ''} ${className ? className : ''}`}
             disabled={disabled}
             onClick={onClick}
         >

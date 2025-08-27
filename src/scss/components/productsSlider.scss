@@ -1,0 +1,77 @@
+.psslide{
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+}
+.pscard{
+    background: #2a78ff;
+    padding: 30px 50px;
+    margin: 0;
+    border-radius: 100px;
+    color: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.pscard_title{
+    display: inline-flex;
+    width: 15%;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 30px 20px;
+    margin: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+.pscard_description{
+    display: inline-flex;
+    width: 85%;
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    padding: 0px 25px;
+    position: relative;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.button{
+    background-color: #192433;
+    color: #fff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 767px) {
+    .psslide{
+        padding: 0 50px;
+    }
+    .pscard{
+        padding: 30px;
+        flex-direction: column;
+        border-radius: 10px;
+    }
+    .pscard_title{
+        width: auto;
+        padding: 0;
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        margin-bottom: 10px;
+    }
+    .pscard_description{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}

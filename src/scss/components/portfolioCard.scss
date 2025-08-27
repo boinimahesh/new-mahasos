@@ -3,7 +3,10 @@
     .portfolio-card{
         @apply flex flex-col w-full gap-16;
         .portfolio-item-image{
-            @apply flex flex-col w-full shadow-image;
+            @apply flex flex-col w-full shadow-image rounded-10;
+            img{
+                @apply rounded-10;
+            }
         }
         .portfolio-item-details{
             @apply flex flex-col w-full gap-3;

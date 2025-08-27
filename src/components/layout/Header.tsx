@@ -1,10 +1,9 @@
-import { Link, NavLink, useLocation } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import Button from "../Button"
 import HandWaveIcon from "../svg/HandWaveIcon"
 import Navbar from "./Navbar"
 import { AnimatePresence, motion } from "framer-motion"
-import LogoImage from "../../../public/logo.svg"
-import LogoIcon from "../../../public/logo-icon.svg"
+import LogoIcon from "/logo-icon.svg?url"
 import { useState } from "react"
 import useSticky from "../../hooks/sticky.hook"
 import CloseIcon from "../svg/CloseIcon"
@@ -21,7 +20,7 @@ const navLists = [
         link: "/about",
     },
     {
-        text: "Our Team",
+        text: "Team",
         link: "/team",
     },
     {
@@ -38,11 +37,33 @@ const navLists = [
     },
     {
         text: "BPO",
-        link: "/bpo"
+        submenu: [
+            {
+                text: "BPO",
+                link: "/bpo"
+            },
+            {
+                text: "B2B Lead Generation",
+                link: "/b2bleadgeneration"
+            },
+        ]
     },
     {
-        text: "b2bleadgeneration",
-        link: "/b2bleadgeneration"
+        text: "Products",
+        submenu: [
+            {
+                text: "Inventory Management",
+                link: "/ourProduct/inventoryManagement"
+            },
+            {
+                text: "Order Management",
+                link: "/ourProduct/orderManagement"
+            },
+            {
+                text: "Integrate",
+                link: "/ourProduct/integrate"
+            },
+        ]
     },
     {
         text: "Jobs",
@@ -118,7 +139,7 @@ const Header = () => {
                                     type="button" 
                                     link 
                                     text="" 
-                                    className=""
+                                    className="flex items-center justify-center w-10 h-10"
                                     icon={<MenuBarIcon />}
                                     onClick={()=>setIsMenuOpen(state => !state)}
                                 />
@@ -144,7 +165,7 @@ const Header = () => {
                             <div className="navbar-slide-main">
                                 <div className="flex items-center justify-between w-full">
                                     <Link to="/home" onClick={() => setIsMenuOpen(false)}>
-                                        <img src={LogoImage} alt="Mahasos" />
+                                        <img src={LogoIcon} alt="Mahasos" />
                                     </Link>
                                     <Button
                                         type="button" 
