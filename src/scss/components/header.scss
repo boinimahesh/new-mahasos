@@ -17,7 +17,13 @@
                 }
             }
         }
+        .logo{
+            @apply bg-white rounded;
+        }
         &.header-sticky{
+            .logo{
+                @apply bg-transparent rounded-none;
+            }
             .nav-wrapper{
                 .nav-items{
                     .nav-item{

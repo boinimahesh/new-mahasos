@@ -129,7 +129,7 @@ const Header = () => {
                 <div className="container">
                     <div className="header-main-wrp">
                         <div className="header-left">
-                            <Link to="/">
+                            <Link to="/" className="logo">
                                 <img src={LogoIcon} alt="Logo" />
                             </Link>
                         </div>

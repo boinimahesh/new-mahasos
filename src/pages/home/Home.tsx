@@ -122,12 +122,12 @@ const portfolioLists = [
         lists: ["Laravel", "Vuejs", "My sql"]
     },
     {
-        image: "/portfolio/creditsesame.svg",
+        image: "/portfolio/sitesync-img.svg",
         title: "Sitesync",
         lists: ["Python", "Reactjs", "Mysql"]
     },
     {
-        image: "/portfolio/creditsesame.svg",
+        image: "/portfolio/dtr-img.svg",
         title: "DTR",
         lists: ["Nodejs", "Reactjs", "Google Flutter"]
     },
@@ -147,7 +147,7 @@ const portfolioLists = [
         lists: ["Laravel", "Vuejs", "Open AI"]
     },
     {
-        image: "/portfolio/creditsesame.svg",
+        image: "/portfolio/rutahveda-img.svg",
         title: "Rutahveda",
         lists: ["Python", "Reactjs", "Mysql"]
     },
