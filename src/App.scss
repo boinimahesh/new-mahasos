@@ -887,3 +887,9 @@ p{
     max-width: 10rem;
   }
 }
+.partners-slider-items{
+  @apply flex flex-col w-full;
+  .swiper{
+    @apply w-full;
+  }
+}

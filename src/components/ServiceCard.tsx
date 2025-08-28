@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState, type ReactNode } from "react";
 import Button from "./Button";
 import HandWaveIcon from "./svg/HandWaveIcon";
+import { useNavigate } from "react-router-dom";
 
 type Item = {
     icon?: string | ReactNode;
@@ -15,6 +16,7 @@ type ServiceCardProps = {
 
 const ServiceCard = ({items} : ServiceCardProps ) => {
     const [hoverCard, setHoverCard]  = useState<number | null>(null);
+    const navigate = useNavigate();
     return (
         <div className="service-wrapper">
             {items.map((item, index) => (
@@ -45,6 +47,7 @@ const ServiceCard = ({items} : ServiceCardProps ) => {
                                 text="Get a Free Quote" 
                                 icon={<HandWaveIcon />}
                                 small 
+                                onClick={() => navigate('/lettalks')}
                             />
                     </div>
                         )}

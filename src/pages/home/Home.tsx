@@ -1,4 +1,3 @@
-import { TypeAnimation } from "react-type-animation";
 import Button from "../../components/Button";
 import Layout from "../../components/layout/Layout"
 import Section from "../../components/Section"
@@ -6,7 +5,6 @@ import HandWaveIcon from "../../components/svg/HandWaveIcon";
 import BirdIcon from "../../components/svg/BirdIcon";
 import IdeasDigitalIcon from "../../components/svg/IdeasDigitalIcon";
 import { motion } from "framer-motion";
-import JulyLogo from "/6july-logo.svg?url";
 import PortfolioCard from "../../components/PortfolioCard";
 import ServiceCard from "../../components/ServiceCard";
 import WebDevIcon from "../../components/svg/WebDevIcon";
@@ -26,6 +24,8 @@ import SupportMaintenanceIcon from "../../components/svg/SupportMaintenanceIcon"
 import B2BLeadGenerationIcon from "../../components/svg/B2BLeadGenerationIcon";
 import UnityGameDevIcon from "../../components/svg/UnityGameDevIcon";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import PartnersSlider from "../../components/PartnersSlider";
 
 const serviceCardLists = [
     {
@@ -154,6 +154,7 @@ const portfolioLists = [
 ]
 const Home = () => {
     const navigate = useNavigate();
+    const [typingStatus, setTypingStatus] = useState('Initializing');
     return (
         <Layout>
             <Section className="section-home-banner">
@@ -246,29 +247,13 @@ const Home = () => {
                 </div>
             </Section>
             <Section className="section-our-partners">
-                <div className="flex flex-col md:flex-row w-full gap-8 md:gap-0">
+                <div className="flex flex-col md:flex-row w-full gap-8 md:gap-8">
                     <div className="flex flex-col gap-4 w-full md:w-5/12">
                         <motion.h2>Our Valued Partners</motion.h2>
                         <motion.p className="text-xl font-normal w-full">Proudly collaborating with leading companies to deliver exceptional digital solutions.</motion.p>
                     </div>
-                    <div className="flex flex-col md:flex-row items-start md:items-center gap-9 w-full md:w-7/12 pl-0 md:pl-8">
-                        <div className="flex items-center">
-                            <div className="flex items-center">
-                                <img src={JulyLogo} alt="6 July logo" />
-                            </div>
-                        </div>
-                        <TypeAnimation
-                            sequence={[
-                                'Design agency, Hyderabad',
-                                1000,
-                                'Design agency, Vizag',
-                                1000,
-                            ]}
-                            wrapper="span"
-                            speed={50}
-                            className=" font-normal font-body text-2xl md:text-4xl leading-full"
-                            repeat={Infinity}
-                        />
+                    <div className="flex flex-col md:flex-row items-start md:items-center w-full md:w-7/12">
+                        <PartnersSlider />
                     </div>
                 </div>
             </Section>
