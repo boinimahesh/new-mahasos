@@ -24,7 +24,6 @@ import SupportMaintenanceIcon from "../../components/svg/SupportMaintenanceIcon"
 import B2BLeadGenerationIcon from "../../components/svg/B2BLeadGenerationIcon";
 import UnityGameDevIcon from "../../components/svg/UnityGameDevIcon";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import PartnersSlider from "../../components/PartnersSlider";
 
 const serviceCardLists = [
@@ -154,7 +153,6 @@ const portfolioLists = [
 ]
 const Home = () => {
     const navigate = useNavigate();
-    const [typingStatus, setTypingStatus] = useState('Initializing');
     return (
         <Layout>
             <Section className="section-home-banner">

@@ -1,29 +1,20 @@
 import { TypeAnimation } from 'react-type-animation';
 import JulyLogo from "/6july-logo.svg?url";
 import BPOLogo from "/bpo-logo.svg?url";
-
-
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
 import { useRef } from "react";
-
+import 'swiper/css';
 
 const PartnersSlider = () => {
     const swiperRef = useRef<any>(null);
     return (
         <div className="partners-slider-items">
             <Swiper
-                modules={[Navigation, Pagination]}
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
                 spaceBetween={30}
                 slidesPerView={1}
                 loop
-                >
-                {/* Slide 1 with typing animation */}
+            >
                 <SwiperSlide>
                     <div className="flex flex-col md:flex-row items-start md:items-center gap-8 w-full">
                         <div className="flex items-center">
