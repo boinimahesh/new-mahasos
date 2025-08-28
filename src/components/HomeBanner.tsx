@@ -4,15 +4,15 @@ import HomeFront from "./svg/HomeFront";
 import { TypeAnimation } from "react-type-animation";
 
 const HomeBanner = () => {
-    const [ backHover, setBackHover ] = useState('');
-    const [ frontHover, setFrontHover ] = useState('');
+    const [ backHover, setBackHover ] = useState<string>('');
+    const [ frontHover, setFrontHover ] = useState<string>('');
     let pointTop = backHover ? '100' : frontHover ? '0' : '50'
     let pointBottom = backHover ? '100' : frontHover ? '0' : '50'
     return (
         <div className="slider_effone">
             <div className={backHover ? 'back on' : 'back'}
-                onMouseEnter={() => setBackHover(true)}
-                onMouseLeave={() => setBackHover(false)}
+                onMouseEnter={() => setBackHover("hovered")}
+                onMouseLeave={() => setBackHover("")}
                 
             >
                 <HomeBack />
@@ -42,8 +42,8 @@ const HomeBanner = () => {
             </div>
             <div 
                 className={frontHover ? 'front on' : 'front'}
-                onMouseEnter={() => setFrontHover(true)}
-                onMouseLeave={() => setFrontHover(false)}
+                onMouseEnter={() => setFrontHover("hovered")}
+                onMouseLeave={() => setFrontHover("")}
                 style={{ clipPath: `polygon(${pointTop}% 0%, 100% 0%, 100% 100%, ${pointBottom}% 100%)`}}
             >
                 <HomeFront />

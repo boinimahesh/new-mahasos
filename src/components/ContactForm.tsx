@@ -4,6 +4,14 @@ import Button from './Button';
 import Modal from './Modal';
 import Loading from './Loading';
 
+interface Errors {
+    username?: string;
+    email?: string;
+    phone?: string;
+    companyname?: string;
+    message?: string;
+}
+
 const ContactForm = () => {
     const { isMobile } = useResponsive();
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -15,7 +23,7 @@ const ContactForm = () => {
         phone: '',
         message: ''
     });
-    const [errors, setErrors] = useState({
+    const [errors, setErrors] = useState<Errors>({
         username: "",
         email: "",
         companyname: "",
@@ -24,7 +32,13 @@ const ContactForm = () => {
     });
     
     const validate = () => {
-        let tempErrors = {};
+        let tempErrors: Errors = {
+            username: "",
+            email: "",
+            companyname: "",
+            phone: "",
+            message: ""
+        };
         let isValid = true;
 
         if (!formData.username?.trim()) {
@@ -58,7 +72,7 @@ const ContactForm = () => {
         return isValid;
     };
 
-    const handleChange = (e) => {
+    const handleChange = (e: any) => {
         const { name, value } = e.target;
         setFormData({
           ...formData,
@@ -70,22 +84,7 @@ const ContactForm = () => {
         e.preventDefault();
         if (validate()) {
             setIsLoading(true);
-            // emailjs.send('service_xqs3pff', 'template_8qn3a7g', formData, {
-            //     publicKey: 'v_FaM568yVE1NSwWS',
-            // })
-            // .then(
-            //     (result) => {
-            //         console.log('SUCCESS!', result.text);
-            //         setIsModalOpen(true);
-            //         setIsLoading(false);
-            //     },
-            //     (error) => {
-            //         console.log('FAILED...', error.text);
-            //         setIsLoading(false);
-            //     },
-            // );
             console.log("Form Submitted", formData);
-            // Reset form if needed
             setFormData({ 
                 username: "", 
                 email: "", 

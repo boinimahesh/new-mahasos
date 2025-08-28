@@ -29,7 +29,7 @@ import ImgVandana from '../assets/images/team/vandana.jpg'
 import ImgAyush from '../assets/images/team/ayush.jpg'
 import WddpCard from "../components/WddpCard"
 import TeamCard from "../components/TeamCard"
-import JoinOurTeamSection from "../components/joinOurTeamSection"
+import JoinOurTeamSection from "../../src/components/JoinOurTeamSection"
 
 
 const Team = () => {

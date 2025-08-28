@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import Button from '../../components/Button'
 import ContactForm from '../../components/ContactForm'
-import JoinOurTeamSection from '../../components/joinOurTeamSection'
+import JoinOurTeamSection from '../../../src/components/JoinOurTeamSection'
 import Layout from '../../components/layout/Layout'
 import PlaceSection from '../../components/PlaceSection'
 import WddpCard from '../../components/WddpCard'

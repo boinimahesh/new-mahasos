@@ -1,9 +1,10 @@
+import type { ReactNode } from "react";
 import { NavLink } from "react-router-dom";
 
 type JobCardProps = {
     title: string;
     code: string;
-    jobContent: string;
+    jobContent?: string | ReactNode;
 }
 
 const JobCard = ({title, code, jobContent} : JobCardProps) => {

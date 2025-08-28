@@ -3,7 +3,7 @@ const HomeBack = () => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="1000px" height="1000px" viewBox="0 0 1000 1000" enableBackground="new 0 0 1000 1000">
             <g>
-                <polyline fill="none" stroke="#FFFFFF" strokeWidth="15" strokeLinecap="round" strokeLinejoin="round" strokeliterlimit="10" points="200.7,251 201.7,328.3 279,329.3 279.9,406.6 357.2,407.5 358.2,484.8 435.5,485.8" />
+                <polyline fill="none" stroke="#FFFFFF" strokeWidth="15" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" points="200.7,251 201.7,328.3 279,329.3 279.9,406.6 357.2,407.5 358.2,484.8 435.5,485.8" />
             </g>
             <g>
                 <polyline fill="none" stroke="#FFFFFF" strokeWidth="15" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" points="596,131.5 651.3,185.5 706.7,131.5 762,185.5 817.3,131.5 872.7,185.5 928,131.5" />

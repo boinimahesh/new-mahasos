@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 type ModalProps = {
     children: ReactNode;
-    onClose: string;
+    onClose?: () => void;
 }
 const Modal = ({onClose, children} : ModalProps) => {
     return (
