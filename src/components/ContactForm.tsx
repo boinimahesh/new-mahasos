@@ -80,7 +80,7 @@ const ContactForm = () => {
         });
     };
     
-    const onSubmit = (e) => {
+    const onSubmit = (e: any) => {
         e.preventDefault();
         if (validate()) {
             setIsLoading(true);
@@ -196,9 +196,7 @@ const ContactForm = () => {
                 </div>
             </form>
                 {isModalOpen && (
-                    <Modal
-                        onClose={''}
-                    >
+                    <Modal>
                         <div className="thank-you-contact-wrp">
                             <div className="thank-you-icon">
                                 <svg 

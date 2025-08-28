@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import useResponsive from '../../hooks/responsive.hook';
 import { useState } from 'react';
 
@@ -8,7 +8,7 @@ type SubmenuItem = {
 }
 
 type Item = {
-    link: string;
+    link?: string;
     text: string;
     submenu?: SubmenuItem[];
 }
@@ -20,16 +20,16 @@ type NavbarProps = {
 
 const Navbar = ({navLists, onMenuCloseClick} : NavbarProps) => {
     const { isMobile } = useResponsive();
-
+    const location = useLocation();
     const [openMenu, setOpenMenu] = useState<string | null>(null);
     const toggleSubMenu = (menu: string) => {
         setOpenMenu(openMenu === menu ? null : menu);
     };
-    const isActive = (link?: string) => location.pathname === link;
+    const isActive = (link?: string) => link && location.pathname === link;
 
     const isDropdownActive = (submenu?: { text: string; link: string }[]) => {
         if (!submenu) return false;
-        return submenu.some((sub) => location.pathname === sub.link);
+        return submenu?.some(sub => location.pathname === sub.link) ?? false;
     };
     return (
         <nav className="nav-wrapper">
@@ -44,6 +44,8 @@ const Navbar = ({navLists, onMenuCloseClick} : NavbarProps) => {
                                             type="button"
                                             className={`nav-item-link ${active ? 'active' : ''}`}
                                             onClick={() => toggleSubMenu(item.text)}
+                                            aria-expanded={openMenu === item.text}
+                                            aria-controls={`submenu-${item.text}`}
                                         >
                                             {item.text}
                                         </button>
@@ -51,22 +53,13 @@ const Navbar = ({navLists, onMenuCloseClick} : NavbarProps) => {
                                             <ul className="nav-item-dropdown-menu">
                                                 {item.submenu.map((sub) => (
                                                     <li key={sub.text}>
-                                                        {isMobile ? (
-                                                            <NavLink 
-                                                                to={sub.link} 
-                                                                className={({ isActive}) => `nav-item-link ${isActive ? 'active' : ''}`}
-                                                                onClick={onMenuCloseClick}
-                                                            >
-                                                                {sub.text}
-                                                            </NavLink>
-                                                        ) : (
-                                                            <NavLink 
-                                                                to={sub.link} 
-                                                                className={({ isActive}) => `nav-item-link ${isActive ? 'active' : ''}`}
-                                                            >
-                                                                {sub.text}
-                                                            </NavLink>
-                                                        )}
+                                                        <NavLink 
+                                                            to={sub.link} 
+                                                            className={({ isActive }) => `nav-item-link ${isActive ? 'active' : ''}`}
+                                                            onClick={ isMobile ? onMenuCloseClick : undefined}
+                                                        >
+                                                            {sub.text}
+                                                        </NavLink>
                                                     </li>
                                                 ))}
                                             </ul>
@@ -74,23 +67,13 @@ const Navbar = ({navLists, onMenuCloseClick} : NavbarProps) => {
                                     </>
                                 ) : (
                                 <>
-                                    {isMobile ?
-                                        <NavLink 
-                                            to={item.link} 
-                                            className={({ isActive}) => `nav-item-link ${isActive ? 'active' : ''}`}
-                                            onClick={onMenuCloseClick}
-                                        >
-                                            {item.text}
-                                        </NavLink>
-                                        :
-                                        
-                                        <NavLink 
-                                            to={item.link} 
-                                            className={({ isActive}) => `nav-item-link ${isActive ? 'active' : ''}`}
-                                        >
-                                            {item.text}
-                                        </NavLink>
-                                    }
+                                    <NavLink 
+                                        to={item.link ?? "#"} 
+                                        className={({ isActive }) => `nav-item-link ${isActive ? 'active' : ''}`}
+                                        onClick={ isMobile ? onMenuCloseClick : undefined}
+                                    >
+                                        {item.text}
+                                    </NavLink>?
                                 </>
                             )}
                         </li>
