@@ -1,6 +1,8 @@
 import { NavLink, useLocation } from 'react-router-dom'
 import useResponsive from '../../hooks/responsive.hook';
 import { useState } from 'react';
+import NavArrowIcon from '../svg/NavArrowIcon';
+import { motion } from 'framer-motion';
 
 type SubmenuItem = {
     link: string;
@@ -48,6 +50,11 @@ const Navbar = ({navLists, onMenuCloseClick} : NavbarProps) => {
                                             aria-controls={`submenu-${item.text}`}
                                         >
                                             {item.text}
+                                            <motion.span 
+                                                animate={{ rotate: openMenu === item.text ? 180 : 0}}
+                                                transition={{ duration: 0.2 }}
+                                                className="nav-item-arrow"
+                                            ><NavArrowIcon /></motion.span>
                                         </button>
                                         {openMenu === item.text && (
                                             <ul className="nav-item-dropdown-menu">
@@ -73,7 +80,7 @@ const Navbar = ({navLists, onMenuCloseClick} : NavbarProps) => {
                                         onClick={ isMobile ? onMenuCloseClick : undefined}
                                     >
                                         {item.text}
-                                    </NavLink>?
+                                    </NavLink>
                                 </>
                             )}
                         </li>

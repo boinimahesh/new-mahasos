@@ -6,6 +6,9 @@
             @apply flex items-center;
             &.nav-item-dropdown{
                 @apply relative flex flex-col items-center justify-center;
+                .nav-item-arrow{
+                    @apply flex items-center ml-1.5 mt-1;
+                }
                 .nav-item-dropdown-menu{
                     @apply relative md:absolute md:top-full bg-white border border-dark-gray/10 shadow-2xl rounded-30 min-w-64 py-0 px-2;
                     .nav-item-link{
