@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import Button from "../Button"
 import HandWaveIcon from "../svg/HandWaveIcon"
 import Navbar from "./Navbar"
@@ -73,33 +73,6 @@ const navLists = [
         text: "Contact",
         link: "/contactus"
     }
-    
-
-
-    // {
-    //     text: "Showcase",
-    //     link: "/showcase",
-    // },
-    // {
-    //     text: "Offerings",
-    //     link: "/offerings",
-    // },
-    // {
-    //     text: "BPO",
-    //     link: "/bpo",
-    // },
-    // {
-    //     text: "Products",
-    //     link: "/products",
-    // },
-    // {
-    //     text: "Opportunities",
-    //     link: "/opportunities",
-    // },
-    // {
-    //     text: "Contact",
-    //     link: "/contact",
-    // },
 ]
 const menuVariants = {
     hidden: {
@@ -118,6 +91,7 @@ const Header = () => {
     const { isMobile } = useResponsive();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const location = useLocation();
+    const navigate = useNavigate();
     return (
         <>
             <motion.header 
@@ -146,7 +120,7 @@ const Header = () => {
                             ) : (
                                 <>
                                     <Navbar navLists={navLists} />
-                                    <Button type="button" text="Let’s Talk" className="btn-top-lettalk" icon={<HandWaveIcon />} />
+                                    <Button type="button" text="Let’s Talk" className="btn-top-lettalk" icon={<HandWaveIcon />} onClick={() => navigate('/lettalks')} />
                                 </>
                             )}
                         </div>
