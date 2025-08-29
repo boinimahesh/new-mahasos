@@ -89,7 +89,7 @@ const ArtificialIntelligence = () => {
                             <h2 className="mb4">Our AI/ML Development Process</h2>
                         </div>
                         
-                        <div className="w_8 mxAuto textCenter text-white mb5">
+                        <div className="w_8 mx-auto text-center text-white mb5">
                             <p>We provide thorough end-to-end services in AI and ML development to ensure a smooth ride from data preparation for AI algorithms and seamless system rollout to cater to a vast user base. We place a premium on communication and openness, providing regular updates at each stage of development to keep you informed and engaged.</p>
                             <p>Our skilled developers have in-depth knowledge of AI and ML technologies, keeping abreast of the most recent advancements and drawing on their experience to devise robust solutions. You can rely on us to deliver high-quality AI and ML solutions tailored to your specific needs, with ongoing support and maintenance to ensure long-term success.</p>
                         </div>

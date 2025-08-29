@@ -890,6 +890,6 @@ p{
 .partners-slider-items{
   @apply flex flex-col w-full;
   .swiper{
-    @apply w-full;
+    @apply w-full md:h-20;
   }
 }

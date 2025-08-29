@@ -198,9 +198,9 @@ const Home = () => {
                     </div>
                 </div>
             </Section>
-            <Section className="section-our-portfolio">
-                <div className="flex flex-col md:flex-row gap-14 items-start w-full">
-                    <div className="flex flex-col w-full md:w-3/12 md:sticky md:top-20">
+            <Section className="section-our-services">
+                <div className="ourservices-wrp">
+                    <div className="ourservices-left">
                         <div className="flex flex-col gap-4">
                             <motion.h2
                                 initial={{opacity: 0, translateY: 20}}
@@ -237,7 +237,7 @@ const Home = () => {
                             </motion.div>
                         </div>
                     </div>
-                    <div className="flex flex-col w-full md:w-9/12 bg-white p-4 md:p-6">
+                    <div className="ourservices-right">
                         <ServiceCard
                              items={serviceCardLists}
                         />
@@ -245,19 +245,31 @@ const Home = () => {
                 </div>
             </Section>
             <Section className="section-our-partners">
-                <div className="flex flex-col md:flex-row w-full gap-8 md:gap-8">
-                    <div className="flex flex-col gap-4 w-full md:w-5/12">
-                        <motion.h2>Our Valued Partners</motion.h2>
-                        <motion.p className="text-xl font-normal w-full">Proudly collaborating with leading companies to deliver exceptional digital solutions.</motion.p>
+                <div className="flex flex-col md:flex-row w-full gap-12 md:gap-8">
+                    <div className="flex flex-col gap-4 w-full md:w-[26rem]">
+                        <motion.h2
+                            initial={{opacity: 0, translateY: 20}}
+                            whileInView={{opacity: 1, translateY: 0}}
+                            transition={{ duration: 1 }}
+                        >Our Valued Partners</motion.h2>
+                        <motion.p
+                            initial={{opacity: 0, translateY: 30}}
+                            whileInView={{opacity: 1, translateY: 0}}
+                            transition={{ duration: 1 }} 
+                            className="text-xl font-normal w-full">Proudly collaborating with leading companies to deliver exceptional digital solutions.</motion.p>
                     </div>
-                    <div className="flex flex-col md:flex-row items-start md:items-center w-full md:w-7/12">
+                    <motion.div
+                        initial={{opacity: 0, translateY: 40}}
+                        whileInView={{opacity: 1, translateY: 0}}
+                        transition={{ duration: 1 }} 
+                        className="flex flex-col md:flex-row items-start md:items-center w-full flex-1">
                         <PartnersSlider />
-                    </div>
+                    </motion.div>
                 </div>
             </Section>
             <Section className="section-our-portfolio">
-                <div className="flex flex-col md:flex-row gap-14 items-start">
-                    <div className="flex flex-col w-full md:w-3/12 md:sticky md:top-20">
+                <div className="our-portfolio-wrapper">
+                    <div className="ourportfolio-left">
                         <div className="flex flex-col gap-4">
                             <motion.h2
                                 initial={{opacity: 0, translateY: 20}}
@@ -269,14 +281,14 @@ const Home = () => {
                                     initial={{opacity: 0, translateY: 30}}
                                     whileInView={{opacity: 1, translateY: 0}}
                                     transition={{ duration: 1 }} 
-                                    className="text-xl font-normal w-full md:w-10/12">
+                                    className="text-xl font-normal w-full">
                                     A showcase of our work across industries, delivering innovative web, mobile, and enterprise solutions that drive real results.
                                 </motion.p>
                                 <motion.p 
                                     initial={{opacity: 0, translateY: 40}}
                                     whileInView={{opacity: 1, translateY: 0}}
                                     transition={{ duration: 1 }} 
-                                    className="text-xl font-normal w-full md:w-10/12">
+                                    className="text-xl font-normal w-full">
                                     Each project reflects our commitment to quality, innovation, and client success from concept to launch, At Mahasos we ensure every solution is tailored to achieve real business growth.
                                 </motion.p>
                             </div>
@@ -294,7 +306,7 @@ const Home = () => {
                             </motion.div>
                         </div>
                     </div>
-                    <div className="flex flex-col w-full md:w-9/12 bg-white p-4 md:p-6">
+                    <div className="ourportfolio-right">
                         <PortfolioCard
                              items={portfolioLists}
                         />

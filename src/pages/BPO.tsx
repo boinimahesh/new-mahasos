@@ -13,7 +13,7 @@ const BPO = () => {
                     <div className="row">
                     <div className="w_full">
                         <h1 className="page_title textCenter">BPO</h1>
-                        <div className="w_10 mxAuto textCenter">
+                        <div className="w_10 mx-auto text-center">
                         <h2><strong>We are Proud to say that we are offical Business Partners with BPO  Solutions Group located at Tijuna</strong></h2>
                         </div>
                     </div>          

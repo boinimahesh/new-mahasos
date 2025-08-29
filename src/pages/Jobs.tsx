@@ -87,7 +87,7 @@ const Jobs = () => {
             <section className="bpo_section">
                 <div className="container">
                     <div className="row mb-10">
-                        <div className={isMobile ? 'w_12 textCenter' : 'w_10 mxAuto textCenter'}>
+                        <div className={isMobile ? 'w_12 textCenter' : 'w_10 mx-auto text-center'}>
                             <h1 className="page_title textCenter">We&apos;re hiring!</h1>
                             <p>Learning from and working with some of the biggest companies in the world to work on their platforms brings exciting and fulfilling new challenges every day. It’s hugely rewarding to see customers using and benefiting from our work that we’ve collaborated with this team over many months.</p>
                         </div>

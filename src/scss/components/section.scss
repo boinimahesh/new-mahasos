@@ -15,13 +15,40 @@
     &.section-our-partners{
         @apply bg-light-gray py-14 md:py-20;
     }
+    &.section-our-services,
     &.section-our-portfolio{
-        @apply bg-light-gray py-14 md:py-20;
+        @apply bg-light-gray py-0 relative;
+        &::before{
+            content: '';
+            @apply absolute right-0 w-6/12 bottom-0 top-0 bg-white;
+        }
     }
     &.section-no-found{
         @apply h-screen items-center justify-center;
     }
     .section-main{
         @apply flex flex-col w-full;
+    }
+}
+.ourservices-wrp,
+.our-portfolio-wrapper{
+    @apply flex flex-col md:flex-row items-start w-full relative gap-14;
+    .ourservices-left,
+    .ourportfolio-left{
+        @apply flex flex-col w-full md:w-3/12 md:sticky md:top-8 bg-light-gray py-14 md:py-18;
+    }
+    .ourservices-right,
+    .ourportfolio-right{
+        @apply flex flex-col w-full md:w-9/12 bg-white px-4 md:px-8 pt-0 md:pt-10 pb-14 md:pb-18;
+    }
+}
+@media screen and (max-width: 767px) {
+    .section-wrapper{
+        &.section-our-services,
+        &.section-our-portfolio{
+            &::before{
+                content: none;
+            }
+        }
     }
 }

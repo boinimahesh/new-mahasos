@@ -40,17 +40,17 @@ const ServiceCard = ({items} : ServiceCardProps ) => {
                             <motion.p className="service-item-text-subtitle">{item.subtitle}</motion.p>
                         </div>
                     </div>
-                        {hoverCard === index && (
-                    <div className="service-item-action">
-                            <Button 
-                                type="button" 
-                                text="Get a Free Quote" 
-                                icon={<HandWaveIcon />}
-                                small 
-                                onClick={() => navigate('/lettalks')}
-                            />
-                    </div>
-                        )}
+                    {hoverCard === index && (
+                        <div className="service-item-action">
+                                <Button 
+                                    type="button" 
+                                    text="Get a Free Quote" 
+                                    icon={<HandWaveIcon />}
+                                    small 
+                                    onClick={() => navigate('/lettalks')}
+                                />
+                        </div>
+                    )}
                 </motion.div>
             ))}
         </div>
