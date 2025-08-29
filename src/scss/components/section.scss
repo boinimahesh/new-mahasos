@@ -1,7 +1,7 @@
 .section-wrapper{
     @apply flex flex-col w-full py-14 px-6;
     &.section-home-banner{
-        @apply items-center justify-center bg-primary text-white pt-20 pb-0 md:h-screen md:-mt-25;
+        @apply items-center justify-center bg-primary text-white pt-20 pb-0 md:-mt-25;
         .container{
             @apply h-full;
             .section-main{
@@ -39,7 +39,7 @@
     }
     .ourservices-right,
     .ourportfolio-right{
-        @apply flex flex-col w-full md:w-9/12 bg-white px-4 md:px-8 pt-0 md:pt-10 pb-14 md:pb-18;
+        @apply flex flex-col w-full md:w-9/12 bg-white pl-4 md:pl-8 pt-0 md:pt-10 pb-14 md:pb-18;
     }
 }
 @media screen and (max-width: 767px) {

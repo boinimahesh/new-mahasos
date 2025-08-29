@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState, type ReactNode } from "react";
 import Button from "./Button";
 import HandWaveIcon from "./svg/HandWaveIcon";
@@ -13,6 +13,17 @@ type Item = {
 type ServiceCardProps = {
     items: Item[];
 }
+
+const hoverVariants = {
+    hidden: {
+        x: 20,
+        transition: { duration: 0.3 },
+    },
+    visible: {
+        x: 0,
+        transition: { duration: 0.1 },
+    },
+};
 
 const ServiceCard = ({items} : ServiceCardProps ) => {
     const [hoverCard, setHoverCard]  = useState<number | null>(null);
@@ -40,8 +51,15 @@ const ServiceCard = ({items} : ServiceCardProps ) => {
                             <motion.p className="service-item-text-subtitle">{item.subtitle}</motion.p>
                         </div>
                     </div>
-                    {hoverCard === index && (
-                        <div className="service-item-action">
+                    <AnimatePresence>
+                        {hoverCard === index && (
+                            <motion.div
+                                initial="hidden"
+                                animate="visible"
+                                exit="hidden" 
+                                variants={hoverVariants}
+                                className="service-item-action"
+                            >
                                 <Button 
                                     type="button" 
                                     text="Get a Free Quote" 
@@ -49,8 +67,9 @@ const ServiceCard = ({items} : ServiceCardProps ) => {
                                     small 
                                     onClick={() => navigate('/lettalks')}
                                 />
-                        </div>
-                    )}
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
                 </motion.div>
             ))}
         </div>

@@ -94,10 +94,7 @@ const Header = () => {
     const navigate = useNavigate();
     return (
         <>
-            <motion.header 
-                initial={{ y: -10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
+            <motion.header
                 className={`header-wrapper ${location.pathname === "/" ? 'header-home' : ''} ${isSticky ? 'header-sticky' : ''}`}
             >
                 <div className="container">

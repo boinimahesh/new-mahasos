@@ -192,7 +192,7 @@ const Home = () => {
                             initial={{opacity: 0, translateY: 50}}
                             whileInView={{opacity: 1, translateY: 0}}
                             transition={{ duration: 1 }} 
-                            className="flex items-center">
+                            className="flex items-center md:pt-20">
                             <IdeasDigitalIcon />
                         </motion.div>
                     </div>

@@ -19,15 +19,15 @@
             @apply flex items-start md:items-center flex-col md:flex-row gap-6;
         }
         .service-item-icon{
-            @apply flex items-center justify-center w-17.5 h-17.5 min-w-17.5 text-black;
+            @apply flex items-center justify-center w-17.5 h-17.5 min-w-17.5 text-black transition-all ease-in;
         }
         .service-item-text{
             @apply flex flex-col;
             .service-item-text-title{
-                @apply font-bold text-3xl leading-9 text-black;
+                @apply font-bold font-body text-3xl leading-9 text-black transition-all ease-in;
             }
             .service-item-text-subtitle{
-                @apply font-semibold text-lg leading-6 md:leading-9 text-dark-gray;
+                @apply font-semibold font-body text-lg leading-5 md:leading-6 text-dark-gray transition-all ease-in;
             }
         }
         .service-item-action{

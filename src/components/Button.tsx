@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { motion } from "framer-motion";
 
 type ButtonProps = {
     type?: "button" | "submit" | "reset";
@@ -18,7 +19,10 @@ type ButtonProps = {
 
 const Button = ({type, text, className, disabled, onClick, link, dark, white, secondary, danger, icon, outline, small} : ButtonProps) => {
     return (
-        <button 
+        <motion.button 
+            whileHover={{ scale: 1.01, boxShadow: "0px 5px 8px rgba(0,0,0,0.3)"}}
+            whileTap={{ scale: 0.95}}
+            transition={{ type: 'spring', stiffness: 300}}
             type={type}
             className={`btn ${link ? 'btn-link' : danger ? 'btn-danger' : white ? 'btn-white' : dark ? 'btn-dark' : secondary ? 'btn-secondary' : 'btn-primary'} ${outline ? 'btn-outline' : ''} ${small ? 'btn-small' : ''} ${className ? className : ''}`}
             disabled={disabled}
@@ -28,7 +32,7 @@ const Button = ({type, text, className, disabled, onClick, link, dark, white, se
                 <span className="btn-icon">{icon}</span>
             )}
             <span className="btn-text">{text}</span>
-        </button>
+        </motion.button>
     )
 }
 
