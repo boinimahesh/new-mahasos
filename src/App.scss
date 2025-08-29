@@ -890,6 +890,14 @@ p{
 .partners-slider-items{
   @apply flex flex-col w-full;
   .swiper{
-    @apply w-full md:h-20;
+    @apply w-full md:h-20 pb-8 md:pb-0;
+    .swiper-pagination{
+      @apply bottom-0;
+      .swiper-pagination-bullet{
+        &.swiper-pagination-bullet-active{
+          @apply bg-dark-secondary;
+        }
+      } 
+    }
   }
 }
