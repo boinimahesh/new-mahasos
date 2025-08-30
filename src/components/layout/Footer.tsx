@@ -43,7 +43,7 @@ const Footer = () => {
                         <div className="flex items-center gap-4">
                             <ul className="social-media-lists">
                                 <li className="sml-item">
-                                    <a href="https://www.linkedin.com/" className="sml-item-link" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://www.linkedin.com/company/mahasos/" className="sml-item-link" target="_blank" rel="noopener noreferrer">
                                         <LinkedInIcon />
                                     </a>
                                 </li>
