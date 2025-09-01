@@ -1,22 +1,24 @@
 import { useNavigate } from 'react-router-dom'
 import Button from '../components/Button'
 import Layout from '../components/layout/Layout'
-import ServiceCardOld from '../components/ServiceCardOld'
 import WddpCard from '../components/WddpCard'
-import IconWebDev from '../assets/images/services/web_development.png'
-import IconUIUXDesign from '../assets/images/services/ui_ux_design.png'
-import IconSupportMaintenance from '../assets/images/services/support_maintenance.png'
-import IconRecruitment from '../assets/images/services/recruitment.png'
-import IconSalesForce from '../assets/images/services/salesForce.png'
-import IconOracleOBRM from '../assets/images/services/oracle.png'
-import IconClinicalSAS from '../assets/images/services/sas.png'
-import IconSAPConsultants from '../assets/images/services/sap.png'
-import IconQualityAnalysis from '../assets/images/services/quality.png'
-import IconBPO from '../assets/images/services/bpo.png'
-import IconECommercestores from '../assets/images/services/e-commerce.png'
-import IconMobileApplications from '../assets/images/services/mobile_app.png'
-import IconB2B from '../assets/images/services/b2b_icon.png'
-import IconAIML from '../assets/images/services/ai-ml-icon.png'
+// import ServiceCardOld from '../components/ServiceCardOld'
+// import IconWebDev from '../assets/images/services/web_development.png'
+// import IconUIUXDesign from '../assets/images/services/ui_ux_design.png'
+// import IconSupportMaintenance from '../assets/images/services/support_maintenance.png'
+// import IconRecruitment from '../assets/images/services/recruitment.png'
+// import IconSalesForce from '../assets/images/services/salesForce.png'
+// import IconOracleOBRM from '../assets/images/services/oracle.png'
+// import IconClinicalSAS from '../assets/images/services/sas.png'
+// import IconSAPConsultants from '../assets/images/services/sap.png'
+// import IconQualityAnalysis from '../assets/images/services/quality.png'
+// import IconBPO from '../assets/images/services/bpo.png'
+// import IconECommercestores from '../assets/images/services/e-commerce.png'
+// import IconMobileApplications from '../assets/images/services/mobile_app.png'
+// import IconB2B from '../assets/images/services/b2b_icon.png'
+// import IconAIML from '../assets/images/services/ai-ml-icon.png'
+import ServiceCard from '../components/ServiceCard'
+import { serviceCardLists } from '../constants/serviceLists'
 
 export const Services = () => {
   const navigate = useNavigate();
@@ -28,7 +30,11 @@ export const Services = () => {
                     <div className="w_full">
                         <h1 className="page_title textCenter">Services</h1>
                     </div>          
-                    <div className="service_group">
+                    <ServiceCard
+                        items={serviceCardLists}
+                        grid
+                    />
+                    {/* <div className="service_group">
                         <ServiceCardOld
                             title="Web Development"
                             desc="Productive & engaging web solutions for smarter work and improved customer service."
@@ -99,7 +105,7 @@ export const Services = () => {
                             desc="Our custom AI/ML development services enable your system to exhibit intelligent thinking, auditory perception, and decision-making capabilities."
                             src={IconAIML}
                         />
-                    </div>
+                    </div> */}
                     <div className="hcenter">
                         <Button
                             type="button"

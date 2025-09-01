@@ -7,109 +7,11 @@ import IdeasDigitalIcon from "../../components/svg/IdeasDigitalIcon";
 import { motion } from "framer-motion";
 import PortfolioCard from "../../components/PortfolioCard";
 import ServiceCard from "../../components/ServiceCard";
-import WebDevIcon from "../../components/svg/WebDevIcon";
-import MobileAppDevIcon from "../../components/svg/MobileAppDevIcon";
-import AIMLDevIcon from "../../components/svg/AIMLDevIcon";
-import UIUXDesignIcon from "../../components/svg/UIUXDesignIcon";
-import RecruitmentIcon from "../../components/svg/RecruitmentIcon";
-import QualityAnalysisIcon from "../../components/svg/QualityAnalysisIcon";
-import DevopsIcon from "../../components/svg/DevopsIcon";
-import ECommerceSolutionsIcon from "../../components/svg/ECommerceSolutionsIcon";
-import BPOIcon from "../../components/svg/BPOIcon";
-import SAPConsultingIcon from "../../components/svg/SAPConsultingIcon";
-import ClinicalSASIcon from "../../components/svg/ClinicalSASIcon";
-import OracleOBRMIcon from "../../components/svg/OracleOBRMIcon";
-import SalesforceDevIcon from "../../components/svg/SalesforceDevIcon";
-import SupportMaintenanceIcon from "../../components/svg/SupportMaintenanceIcon";
-import B2BLeadGenerationIcon from "../../components/svg/B2BLeadGenerationIcon";
-import UnityGameDevIcon from "../../components/svg/UnityGameDevIcon";
 import { useNavigate } from "react-router-dom";
 import PartnersSlider from "../../components/PartnersSlider";
 import OfficeCard from "../../components/OfficeCard";
 import { officeLists } from "../../constants/officeLists";
-
-const serviceCardLists = [
-    {
-        icon: <WebDevIcon />,
-        title: "Web Development",
-        subtitle: "Smart, scalable, and engaging web platforms.",
-    },
-    {
-        icon: <MobileAppDevIcon />,
-        title: "Mobile App Development",
-        subtitle: "Native, hybrid & cross-platform mobile experiences.",
-    },
-    {
-        icon: <AIMLDevIcon />,
-        title: "AI/ML Development",
-        subtitle: "Intelligent automation & smarter decisions.",
-    },
-    {
-        icon: <UIUXDesignIcon />,
-        title: "UI/UX Design",
-        subtitle: "Elegant, user-centered design for better engagement.",
-    },
-    {
-        icon: <RecruitmentIcon />,
-        title: "Recruitment",
-        subtitle: "Precise hiring solutions for the right talent.",
-    },
-    {
-        icon: <QualityAnalysisIcon />,
-        title: "Quality Analysis",
-        subtitle: "Ensuring flawless performance and usability.",
-    },
-    {
-        icon: <DevopsIcon />,
-        title: "Devops",
-        subtitle: "Automating delivery, boosting efficiency.",
-    },
-    {
-        icon: <ECommerceSolutionsIcon />,
-        title: "E-commerce Solutions",
-        subtitle: "Unified multi-vendor & marketplace management.",
-    },
-    {
-        icon: <BPOIcon />,
-        title: "BPO",
-        subtitle: "Efficient outsourcing to streamline operations.",
-    },
-    {
-        icon: <SAPConsultingIcon />,
-        title: "SAP Consulting",
-        subtitle: "Custom SAP solutions for seamless integration.",
-    },
-    {
-        icon: <ClinicalSASIcon />,
-        title: "Clinical SAS",
-        subtitle: "Data-driven insights to grow healthcare efficiency.",
-    },
-    {
-        icon: <OracleOBRMIcon />,
-        title: "Oracle OBRM",
-        subtitle: "Expert BRM customization & optimization.",
-    },
-    {
-        icon: <SalesforceDevIcon />,
-        title: "Salesforce Development",
-        subtitle: "Tailored Salesforce solutions for better workflows.",
-    },
-    {
-        icon: <SupportMaintenanceIcon />,
-        title: "Support & Maintenance",
-        subtitle: "Keeping your apps reliable and up-to-date.",
-    },
-    {
-        icon: <B2BLeadGenerationIcon />,
-        title: "B2B Lead Generation",
-        subtitle: "Identify & connect with high-value prospects.",
-    },
-    {
-        icon: <UnityGameDevIcon />,
-        title: "Unity Game Development",
-        subtitle: "Identify & connect with high-value prospects.",
-    },
-]
+import { serviceCardLists } from "../../constants/serviceLists";
 
 const portfolioLists = [
     {

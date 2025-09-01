@@ -34,4 +34,21 @@
             @apply flex w-full md:w-auto items-center;
         }
     }
+    &.service-grid-wrp{
+        @apply flex flex-row flex-wrap gap-8;
+        .service-card{
+            @apply w-full flex-col md:w-[calc(33.333%_-_1.375rem)] min-h-80 hover:shadow-2xl;
+            .service-item-content{
+                @apply flex-col items-center justify-center text-center;
+                .service-item-text{
+                    .service-item-text-title{
+                        @apply text-2xl leading-9;
+                    }
+                    .service-item-text-subtitle{
+                        @apply text-lg;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -26,9 +26,6 @@
         }
         .logo{
             @apply bg-white rounded py-1 px-1.5;
-            img{
-                @apply max-w-12.5 max-h-12.5;
-            }
         }
         &.header-sticky{
             .logo{
@@ -56,6 +53,11 @@
         @apply flex items-center justify-between w-full;
         .header-left{
             @apply flex items-center w-60 md:w-64 md:min-w-64;
+            .logo{
+                img{
+                    @apply max-w-12.5 max-h-12.5;
+                }
+            }
         }
         .header-right{
             @apply flex items-center justify-end md:w-[calc(100%_-_15rem)] gap-2;
@@ -74,6 +76,11 @@
     z-index: 999;
     .navbar-slide-main{
         @apply flex flex-col items-center justify-between w-full gap-12;
+        .logo{
+            img{
+                @apply max-w-12.5 max-h-12.5;
+            }
+        }
     }
     .nav-wrapper{
         @apply flex flex-col w-full;

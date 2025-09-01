@@ -12,6 +12,7 @@ type Item = {
 
 type ServiceCardProps = {
     items: Item[];
+    grid?: boolean;
 }
 
 const hoverVariants = {
@@ -23,13 +24,21 @@ const hoverVariants = {
         x: 0,
         transition: { duration: 0.1 },
     },
+    gridHidden: {
+        y: 20,
+        transition: { duration: 0.3 },
+    },
+    gridVisible: {
+        y: 0,
+        transition: { duration: 0.1 },
+    }
 };
 
-const ServiceCard = ({items} : ServiceCardProps ) => {
+const ServiceCard = ({items, grid} : ServiceCardProps ) => {
     const [hoverCard, setHoverCard]  = useState<number | null>(null);
     const navigate = useNavigate();
     return (
-        <div className="service-wrapper">
+        <div className={`service-wrapper ${grid ? 'service-grid-wrp' : ''}`}>
             {items.map((item, index) => (
                 <motion.div
                     initial={{ opacity: 0, translateY: index * 10 }}
@@ -54,9 +63,9 @@ const ServiceCard = ({items} : ServiceCardProps ) => {
                     <AnimatePresence>
                         {hoverCard === index && (
                             <motion.div
-                                initial="hidden"
-                                animate="visible"
-                                exit="hidden" 
+                                initial={grid ? "gridHidden" : "hidden"}
+                                animate={grid ? "gridVisible" : "visible"}
+                                exit={grid ? "gridHidden" : "hidden"} 
                                 variants={hoverVariants}
                                 className="service-item-action"
                             >

@@ -135,7 +135,7 @@ const Header = () => {
                         >
                             <div className="navbar-slide-main">
                                 <div className="flex items-center justify-between w-full">
-                                    <Link to="/home" onClick={() => setIsMenuOpen(false)}>
+                                    <Link to="/home" className="logo" onClick={() => setIsMenuOpen(false)}>
                                         <img src={LogoIcon} alt="Mahasos" />
                                     </Link>
                                     <Button
