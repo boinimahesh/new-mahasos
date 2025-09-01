@@ -40,6 +40,7 @@ export default {
         '45': '11.25rem',
         '46': '11.5rem',
         '46.5': '11.625rem',
+        '50': '12.5rem',
       },
       fontFamily: {
         'heading': '"Arvo", serif',

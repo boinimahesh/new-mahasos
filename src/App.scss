@@ -16,18 +16,6 @@ body{
 .container-fluid{
     @apply w-full max-w-[1440px] mx-auto;
 }
-h2{
-    @apply text-40 leading-full font-heading font-bold;
-}
-h3{
-    @apply text-68 leading-full font-heading;
-}
-h4{
-    @apply text-68 leading-full font-heading;
-}
-h1, h2, h3, h4, h5, h6{
-	font-family: 'Arvo', serif;
-}
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -36,10 +24,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 h1, .h1 {
   font-size: 2.5rem;
-}
-h2, .h2 {
-  font-size: 2rem;
-  font-weight: 600;
 }
 h3, .h3 {
   font-size: 1.75rem;
@@ -52,6 +36,19 @@ h5, .h5 {
 }
 h6, .h6 {
   font-size: 1rem;
+}
+
+h2{
+    @apply text-40 leading-full font-heading font-bold;
+}
+h3{
+    @apply text-68 leading-full font-heading;
+}
+h4{
+    @apply text-68 leading-full font-heading;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Arvo', serif;
 }
 a {
   color: inherit;

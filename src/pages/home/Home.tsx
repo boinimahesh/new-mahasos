@@ -25,6 +25,11 @@ import B2BLeadGenerationIcon from "../../components/svg/B2BLeadGenerationIcon";
 import UnityGameDevIcon from "../../components/svg/UnityGameDevIcon";
 import { useNavigate } from "react-router-dom";
 import PartnersSlider from "../../components/PartnersSlider";
+import OfficeCard from "../../components/OfficeCard";
+import MapIndia from "../../components/svg/MapIndia";
+import MapMexico from "../../components/svg/MapMexico";
+import MapUSA from "../../components/svg/MapUSA";
+import MapCanada from "../../components/svg/MapCanada";
 
 const serviceCardLists = [
     {
@@ -149,6 +154,36 @@ const portfolioLists = [
         image: "/portfolio/rutahveda-img.svg",
         title: "Rutahveda",
         lists: ["Python", "Reactjs", "Mysql"]
+    },
+]
+const officeLists = [
+    {
+        title: "India",
+        icon: <MapIndia />,
+        address: "815, 8th Floor, Manjeera Majestic Commercial, Kukatpally, Hyderabad, Telangana 500072",
+        mail: "info@mahasos.com",
+        mobileNumber: "",
+    },
+    {
+        title: "Mexico",
+        icon: <MapMexico />,
+        address: "BPO Solutions Group Blvd. Diaz Ordaz 12415, El Paraiso, 22106 Tijuana, B.C",
+        mail: "info@mahasos.com",
+        mobileNumber: "+1-(310)463-8800",
+    },
+    {
+        title: "USA",
+        icon: <MapUSA />,
+        address: "3451 Via Montebello 192-315 Carlsbad, CA 92009",
+        mail: "info@mahasos.com",
+        mobileNumber: "+1-(626)375-7176",
+    },
+    {
+        title: "Canada",
+        icon: <MapCanada />,
+        address: "27 Mullen Drive, Ajax, ON L1T2A5",
+        mail: "info@mahasos.com",
+        mobileNumber: "+1-(647)895-8797",
     },
 ]
 const Home = () => {
@@ -354,6 +389,27 @@ const Home = () => {
                             <BirdIcon />
                         </motion.div>
                     </div>
+                </div>
+            </Section>
+            <Section>
+                <div className="flex flex-col w-full gap-18">
+                    <div className="flex flex-col items-center justify-center text-center gap-4">
+                        <motion.h2
+                            initial={{opacity: 0, translateY: 20}}
+                            whileInView={{opacity: 1, translateY: 0}}
+                            transition={{ duration: 1 }}
+                        >
+                            Our Offices
+                        </motion.h2>
+                        <motion.p 
+                            initial={{opacity: 0, translateY: 30}}
+                            whileInView={{opacity: 1, translateY: 0}}
+                            transition={{ duration: 1 }} 
+                            className="text-xl font-normal">
+                            Connecting with clients worldwide through our local expertise.
+                        </motion.p>
+                    </div>
+                    <OfficeCard officeLists={officeLists} />
                 </div>
             </Section>
         </Layout>
