@@ -25,7 +25,10 @@
             }
         }
         .logo{
-            @apply bg-white rounded;
+            @apply bg-white rounded py-1 px-1.5;
+            img{
+                @apply max-w-12.5 max-h-12.5;
+            }
         }
         &.header-sticky{
             .logo{

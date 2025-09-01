@@ -1,6 +1,9 @@
 import ContactForm from '../components/ContactForm'
 import Layout from '../components/layout/Layout'
-import PlaceSection from '../components/PlaceSection'
+import OfficeCard from '../components/OfficeCard'
+import Section from '../components/Section'
+import { motion } from 'framer-motion'
+import { officeLists } from '../constants/officeLists'
 
 const Contactus = () => {
     return (
@@ -19,7 +22,27 @@ const Contactus = () => {
                     </div>
                 </div>
             </section>
-            <PlaceSection notitle bgwhite />
+            <Section>
+                <div className="flex flex-col w-full gap-18">
+                    <div className="flex flex-col items-center justify-center text-center gap-4">
+                        <motion.h2
+                            initial={{opacity: 0, translateY: 20}}
+                            whileInView={{opacity: 1, translateY: 0}}
+                            transition={{ duration: 1 }}
+                        >
+                            Our Offices
+                        </motion.h2>
+                        <motion.p 
+                            initial={{opacity: 0, translateY: 30}}
+                            whileInView={{opacity: 1, translateY: 0}}
+                            transition={{ duration: 1 }} 
+                            className="text-xl font-normal">
+                            Connecting with clients worldwide through our local expertise.
+                        </motion.p>
+                    </div>
+                    <OfficeCard officeLists={officeLists} />
+                </div>
+            </Section>
         </Layout>
     )
 }
