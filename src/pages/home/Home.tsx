@@ -13,6 +13,8 @@ import OfficeCard from "../../components/OfficeCard";
 import { officeLists } from "../../constants/officeLists";
 import { serviceCardLists } from "../../constants/serviceLists";
 import { portfolioLists } from "../../constants/portfolioLists";
+import ClientSlider from "../../components/ClientSlider";
+import { clientLists } from "../../constants/clientLists";
 
 const Home = () => {
     const navigate = useNavigate();
@@ -60,6 +62,9 @@ const Home = () => {
                         </motion.div>
                     </div>
                 </div>
+            </Section>
+            <Section className="section-client">
+                <ClientSlider clientLists={clientLists} />
             </Section>
             <Section className="section-our-services">
                 <div className="ourservices-wrp">

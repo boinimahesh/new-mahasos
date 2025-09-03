@@ -88,4 +88,9 @@ export const portfolioLists: Item[] = [
         title: "Pethotels",
         lists: ["Angular"]
     },
+    {
+        image: "/portfolio/pram-img.svg",
+        title: "PRAM",
+        lists: ["React"]
+    },
 ]

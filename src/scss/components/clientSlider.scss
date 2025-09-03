@@ -1,0 +1,18 @@
+.client-slider-wrapper{
+    @apply flex flex-col w-full;
+    .swiper{
+        @apply w-full;
+        .swiper-wrapper{
+            @apply items-center;
+        }
+    }
+    .client-item{
+        @apply flex flex-col items-center justify-center w-full;
+        .client-item-img{
+            @apply flex flex-col items-center justify-center p-4;
+            img{
+                @apply cursor-pointer max-h-25;
+            }
+        }
+    }
+}

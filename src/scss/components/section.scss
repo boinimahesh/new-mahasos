@@ -9,6 +9,9 @@
             }
         }
     }
+    &.section-client{
+        @apply bg-light-gray;
+    }
     &.section-ready-to-transform{
         @apply bg-primary text-white;
     }
