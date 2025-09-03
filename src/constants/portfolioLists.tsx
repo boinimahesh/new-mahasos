@@ -39,49 +39,49 @@ export const portfolioLists = [
         title: "Rutahveda",
         lists: ["Python", "Reactjs", "Mysql"]
     },
-    // {
-    //     image: "/portfolio/rutahveda-img.svg",
-    //     title: "Dude Agency",
-    //     lists: ""
-    // },
-    // {
-    //     image: "/portfolio/rutahveda-img.svg",
-    //     title: "Maruthi Printers",
-    //     lists: ""
-    // },
-    // {
-    //     image: "/portfolio/rutahveda-img.svg",
-    //     title: "US Maxim",
-    //     lists: ""
-    // },
-    // {
-    //     image: "/portfolio/rutahveda-img.svg",
-    //     title: "Panoramic Visions",
-    //     lists: ""
-    // },
-    // {
-    //     image: "/portfolio/rutahveda-img.svg",
-    //     title: "Watch Universe USA",
-    //     lists: ""
-    // },
-    // {
-    //     image: "/portfolio/rutahveda-img.svg",
-    //     title: "Santa for a Day",
-    //     lists: ""
-    // },
-    // {
-    //     image: "/portfolio/rutahveda-img.svg",
-    //     title: "CIENCE",
-    //     lists: ""
-    // },
-    // {
-    //     image: "/portfolio/rutahveda-img.svg",
-    //     title: "The Sportsman's Club",
-    //     lists: ""
-    // },
-    // {
-    //     image: "/portfolio/rutahveda-img.svg",
-    //     title: "Pethotels",
-    //     lists: ""
-    // },
+    {
+        image: "/portfolio/dude-agency-img.jpg",
+        title: "Dude Agency",
+        lists: ""
+    },
+    {
+        image: "/portfolio/maruthi-printers-img.svg",
+        title: "Maruthi Printers",
+        lists: ["WordPress", "Php", "Mysql"]
+    },
+    {
+        image: "/portfolio/us-maxim-img.svg",
+        title: "US Maxim",
+        lists: ["WordPress", "Php", "Mysql"]
+    },
+    {
+        image: "/portfolio/panoramic-visions-img.svg",
+        title: "Panoramic Visions",
+        lists: ["Shopify"]
+    },
+    {
+        image: "/portfolio/watch-universe-usa-img.svg",
+        title: "Watch Universe USA",
+        lists: ["Shopify"]
+    },
+    {
+        image: "/portfolio/santa-for-a-day-img.svg",
+        title: "Santa for a Day",
+        lists: ["WordPress", "Php", "Mysql"]
+    },
+    {
+        image: "/portfolio/cience-img.svg",
+        title: "CIENCE",
+        lists: ""
+    },
+    {
+        image: "/portfolio/the-sportsmans-club-img.svg",
+        title: "The Sportsman's Club",
+        lists: ["WordPress", "Php", "Mysql"]
+    },
+    {
+        image: "/portfolio/pethotels-with-dog.svg",
+        title: "Pethotels",
+        lists: ["Angular"]
+    },
 ]
