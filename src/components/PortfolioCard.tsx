@@ -33,21 +33,23 @@ const PortfolioCard = ({ items } : PortfolioCardProps) => {
                             initial={{ opacity: 0, translateY: 20}}
                             animate={{ opacity: 1, translateY: 0}} 
                             className="portfolio-item-detail-title">{item.title}</motion.h3>
-                        <motion.ul
-                            initial={{ opacity: 0, translateY: 30}}
-                            animate={{ opacity: 1, translateY: 0}} 
-                            className="portfolio-item-detail-lists">
-                            {item.lists.map((item, index) => (
-                                <motion.li 
-                                    initial={{ opacity: 0, translateY: index * 10}}
-                                    whileInView={{ opacity: 1, translateY: 0}}
-                                    className="portfolio-item-detail-list-item" 
-                                    key={index}
-                                >
-                                    {item}
-                                </motion.li>
-                            ))}
-                        </motion.ul>
+                        {item.lists && (
+                            <motion.ul
+                                initial={{ opacity: 0, translateY: 30}}
+                                animate={{ opacity: 1, translateY: 0}} 
+                                className="portfolio-item-detail-lists">
+                                {item.lists.map((item, index) => (
+                                    <motion.li 
+                                        initial={{ opacity: 0, translateY: index * 10}}
+                                        whileInView={{ opacity: 1, translateY: 0}}
+                                        className="portfolio-item-detail-list-item" 
+                                        key={index}
+                                    >
+                                        {item}
+                                    </motion.li>
+                                ))}
+                            </motion.ul>
+                        )}
                     </div>
                 </motion.div>
             ))}
