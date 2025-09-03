@@ -1,4 +1,10 @@
-export const portfolioLists = [
+type Item = {
+    image: string;
+    title: string;
+    lists?: string[];
+}
+
+export const portfolioLists: Item[] = [
     {
         image: "/portfolio/creditsesame.svg",
         title: "Credit Sesame",
@@ -42,7 +48,6 @@ export const portfolioLists = [
     {
         image: "/portfolio/dude-agency-img.jpg",
         title: "Dude Agency",
-        lists: ""
     },
     {
         image: "/portfolio/maruthi-printers-img.svg",
@@ -72,7 +77,6 @@ export const portfolioLists = [
     {
         image: "/portfolio/cience-img.svg",
         title: "CIENCE",
-        lists: ""
     },
     {
         image: "/portfolio/the-sportsmans-club-img.svg",

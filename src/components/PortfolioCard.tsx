@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 type Item = {
     image: string;
     title: string;
-    lists: string[];
+    lists?: string[];
 }
 
 type PortfolioCardProps = {
